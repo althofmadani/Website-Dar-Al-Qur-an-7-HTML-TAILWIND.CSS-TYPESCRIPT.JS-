@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Amiri, Scheherazade_New } from "next/font/google";
 import "./globals.css";
+import RegistrationModal from "@/components/layout/RegistrationModal";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -33,9 +34,6 @@ export const metadata: Metadata = {
   },
 };
 
-import FloatingCTA from "@/components/ui/FloatingCTA";
-import RegistrationModal from "@/components/layout/RegistrationModal";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,7 +45,6 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} ${amiri.variable} ${scheherazade.variable} antialiased`}
       >
         {children}
-        <FloatingCTA />
         <RegistrationModal />
       </body>
     </html>

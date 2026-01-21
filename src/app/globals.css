@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-islamic-primary: #1A6850;
-  --color-islamic-secondary: #2D8A6B;
-  --color-accent-primary: #2d981f;
-  --color-accent-hover: #177325;
+  --color-islamic-primary: #027532;
+  --color-islamic-secondary: #027532;
+  --color-accent-primary: #027532;
+  --color-accent-hover: #026629;
 
   --color-text-primary: #4B4B4B;
   --color-text-secondary: #4B4B4B;
+  --color-text-islamic-primary: #027532;
 
   --color-surface-primary: #ffffff;
   --color-surface-secondary: #FBFBFD;

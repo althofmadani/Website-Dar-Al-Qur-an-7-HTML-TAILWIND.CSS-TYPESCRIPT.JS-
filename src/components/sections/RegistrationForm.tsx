@@ -30,7 +30,6 @@ export default function RegistrationForm({ onSuccess }: RegistrationFormProps) {
     });
 
     const onSubmit = async (data: RegistrationFormValues) => {
-        console.log(data);
         await new Promise((resolve) => setTimeout(resolve, 2000));
         alert('Pendaftaran berhasil dikirim! Kami akan menghubungi Anda segera.');
         reset();

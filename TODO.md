@@ -1,38 +1,53 @@
-# Landing Page Overhaul - TODO List
+# Contact Section Renovation Plan
 
-## New Sections to Create
+## Information Gathered
 
-### 1. Profil Section (About Us) ✅
-- [x] Create text-left, image-right layout
-- [x] Add history/vision content for Pondok Pesanren Dar Al-Qur'an
-- [x] Use placeholder image
-- [x] Add smooth animations
+1. **Current State**: `src/components/sections/Contact.tsx` only contains a contact form
+2. **Project Context**: Next.js + Tailwind CSS + TypeScript website for "Pondok Pesanten Dar Al-Qur'an"
+3. **Color Scheme**: Islamic primary green (`#027532`), neutral grays
+4. **Available Icons**: `MapPin`, `Phone`, `Mail`, `Clock`, `Send` from Icons.tsx
+5. **Subpages**: `src/app/kontak/` with `alamat/` and `sosial-media/` directories
+6. **Tailwind Config**: Custom shadows (`shadow-soft`, `shadow-elevated`) and colors defined in globals.css
 
-### 2. Galeri Section (Gallery) ✅
-- [x] Create masonry/grid layout
-- [x] Add 6-8 placeholder images showing campus life
-- [x] Add hover effects on images
-- [x] Ensure responsive design
+## Plan: Redesign Contact Section with 3 Boxes
 
-### 3. Guru Section (Teachers) ✅
-- [x] Create "Profil Pengasuh" section as main attraction
-- [x] Feature Dr. K.H. Ahsin Sakho Muhammad, MA
-- [x] Add 3-4 teacher cards with circular profile images
-- [x] Include names and subjects
+### Box 1: Informasi Kontak (Contact Information)
+- Address display
+- Phone number(s)
+- Email address
+- Operating hours
+- Use icons: MapPin, Phone, Mail, Clock
 
-### 4. PendaftaranCTA Section ✅
-- [x] Create high-contrast CTA strip
-- [x] Add "Open Registration" text
-- [x] Add button linking to registration page
-- [x] Use white/green color theme
+### Box 2: Peta Lokasi (Location Map)
+- Google Maps embed placeholder
+- Visual location representation
+- Styled container with shadow
 
-### 5. Update page.tsx ✅
-- [x] Remove old sections (Welcome, Features, QuickActions, FAQ, Contact)
-- [x] Add new sections (Profil, Galeri, Guru, PendaftaranCTA)
-- [x] Keep Hero, Navbar, Footer
+### Box 3: Hubungi Kami (Contact Form)
+- Keep existing form functionality
+- Name, Email, Message fields
+- Submit button with loading state
 
-## Testing
-- [ ] Verify responsive design on all screen sizes
-- [ ] Check animations work properly
-- [ ] Verify color theme consistency
+### Layout Design
+- Three-column grid on desktop
+- Single column on mobile
+- Consistent spacing and shadow styling
+- Rounded corners matching design system (32px)
+- Background decoration elements
+
+## Files to Edit
+- `src/components/sections/Contact.tsx` - Main implementation
+
+## Implementation Steps
+1. ✅ Create three-column layout structure
+2. ✅ Build Informasi Kontak box with contact details
+3. ✅ Add Peta Lokasi box with map placeholder
+4. ✅ Redesign Hubungi Kami form to fit the box layout
+5. ✅ Ensure responsive design for mobile devices
+6. ✅ Apply consistent styling (shadows, rounded corners, colors)
+
+## Follow-up Steps
+- Test responsiveness across screen sizes
+- Verify form validation works correctly
+- Check color contrast and accessibility
 

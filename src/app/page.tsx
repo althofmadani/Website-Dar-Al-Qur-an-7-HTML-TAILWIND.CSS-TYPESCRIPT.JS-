@@ -4,6 +4,7 @@ import Profil from "@/components/sections/Profil";
 import Galeri from "@/components/sections/Galeri";
 import Guru from "@/components/sections/Guru";
 import PendaftaranCTA from "@/components/sections/PendaftaranCTA";
+import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -29,6 +30,10 @@ export default function Home() {
 
         <AnimatedSection delay={0.2}>
           <PendaftaranCTA />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <Contact />
         </AnimatedSection>
       </main>
 

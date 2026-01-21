@@ -1,12 +1,25 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 
 export default function Hero() {
+    const [greeting, setGreeting] = useState('Selamat Datang');
+
+    useEffect(() => {
+        const hour = new Date().getHours();
+        if (hour < 12) {
+            setGreeting('Selamat Pagi');
+        } else if (hour < 18) {
+            setGreeting('Selamat Siang');
+        } else {
+            setGreeting('Selamat Malam');
+        }
+    }, []);
+
     return (
         <section className="relative w-full h-screen overflow-hidden flex items-center justify-center text-center">
             {/* Background with Ken Burns effect */}
@@ -45,9 +58,9 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-[4rem] font-extrabold leading-[1.1] mb-6 text-white text-shadow-lg"
                 >
-                    Selamat Datang di Website <br />
-                    Pondok Pesantren <br />
-                    <span className="text-islamic-primary">Dar Al-Qur'an</span>
+                    {greeting} di Website <br />
+                    Pondok Pesantern <br />
+                    <span className="text-islamic-primary">Dar Al-Qur'an <br /> Kebon Baru</span>
                 </motion.h1>
 
                 <motion.p
@@ -83,3 +96,4 @@ export default function Hero() {
         </section>
     );
 }
+

@@ -100,7 +100,8 @@ export default function Navbar() {
     const handleMouseLeave = () => {
         const timeout = setTimeout(() => {
             setActiveMenu(null);
-        }, 150); // Quick close when leaving dropdown area
+            setIsSearchOpen(false);
+        }, 100); // Faster close when leaving dropdown area
         setHoverTimeout(timeout);
     };
 
@@ -226,6 +227,21 @@ export default function Navbar() {
                 </div>
             </nav>
 
+            {/* Backdrop - Always rendered, controlled by CSS */}
+            <div
+                className={`fixed inset-0 top-12 z-[40] bg-white/10 backdrop-blur-sm transition-opacity duration-200 ease-in-out pointer-events-none ${
+                    activeMenu || isSearchOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
+                }`}
+                onClick={() => {
+                    setActiveMenu(null);
+                    setIsSearchOpen(false);
+                }}
+                onMouseEnter={() => {
+                    if (hoverTimeout) clearTimeout(hoverTimeout);
+                }}
+                onMouseLeave={handleMouseLeave}
+            />
+
             {/* Mega Menu Panel */}
             <AnimatePresence mode="sync">
                 {(activeMenu || isSearchOpen) && (
@@ -233,37 +249,28 @@ export default function Navbar() {
                         key={`mega-menu-${activeMenu || 'search'}`}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0 }}
+                        exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeOut" } }}
+                        transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                         className="fixed inset-0 top-12 z-[998]"
                     >
-                        {/* Overlay - Instant blur, no animation delay */}
-                        <div
-                            onClick={() => {
-                                setActiveMenu(null);
-                                setIsSearchOpen(false);
-                            }}
-                            onMouseEnter={handleMouseLeave}
-                            className="absolute inset-0 bg-black/15 backdrop-blur-sm"
-                        />
-
                         {/* Panel */}
                         <motion.div
-                            initial={{ y: '-100%' }}
-                            animate={{ y: 0 }}
-                            exit={{ y: '-100%' }}
-                            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                            initial={{ opacity: 0, y: -15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10, transition: { duration: 0.2, ease: "easeOut" } }}
+                            transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                             className="absolute top-0 left-0 w-full z-[999] bg-white backdrop-blur-2xl border-b border-gray-100 shadow-xl max-h-[70vh] overflow-y-auto py-12"
                             onMouseEnter={() => {
                                 if (hoverTimeout) clearTimeout(hoverTimeout);
                             }}
+                            onMouseLeave={handleMouseLeave}
                         >
                             <div className="max-w-[1200px] mx-auto px-6">
                                 {isSearchOpen ? (
                                     <motion.div
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.15, ease: "easeOut" }}
+                                        transition={{ duration: 0.15, ease: "easeOut", delay: 0.05 }}
                                     >
                                         <div className="max-w-[600px] mx-auto">
                                             <div className="mb-8">
@@ -294,7 +301,7 @@ export default function Navbar() {
                                     <motion.div
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.15, ease: "easeOut" }}
+                                        transition={{ duration: 0.15, ease: "easeOut", delay: 0.05 }}
                                         className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"
                                     >
                                         {MEGA_MENU_CONTENT[activeMenu]?.map((section) => (

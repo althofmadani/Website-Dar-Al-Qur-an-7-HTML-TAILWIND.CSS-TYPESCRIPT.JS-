@@ -12,7 +12,7 @@ const pengasuh = {
     name: "Dr. K.H. Ahsin Sakho Muhammad, MA",
     title: "Pendiri & Pengasuh Utama",
     bio: "Beliau adalah seorang tokoh pendidikan Islam yang telah mengabdikan hidupnya untuk menyebarkan ilmu Al-Qur'an. Dengan latar belakang akademik yang kuat dan pengalaman bertahun-tahun dalam pembinaan generasi muda, beliau menjadi inspirasi bagi seluruh civitas akademika Dar Al-Qur'an.",
-    image: "https://images.unsplash.com/photo-1569037176760-407399c4c301?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
     specialization: "Ilmu Al-Qur'an & Tafsir"
 };
 
@@ -42,7 +42,7 @@ const teachers = [
 
 export default function Guru() {
     return (
-        <section id="guru" className="py-24 bg-white">
+        <section id="guru" className="py-24 bg-surface-secondary">
             <div className="max-w-[1200px] mx-auto px-6">
                 {/* Section Header */}
                 <motion.div
