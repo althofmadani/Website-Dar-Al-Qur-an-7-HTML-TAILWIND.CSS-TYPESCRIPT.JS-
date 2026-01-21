@@ -1,10 +1,9 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
-import Welcome from "@/components/sections/Welcome";
-import Features from "@/components/sections/Features";
-import QuickActions from "@/components/sections/QuickActions";
-import FAQ from "@/components/sections/FAQ";
-import Contact from "@/components/sections/Contact";
+import Profil from "@/components/sections/Profil";
+import Galeri from "@/components/sections/Galeri";
+import Guru from "@/components/sections/Guru";
+import PendaftaranCTA from "@/components/sections/PendaftaranCTA";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -17,23 +16,19 @@ export default function Home() {
         <Hero />
 
         <AnimatedSection>
-          <Welcome />
+          <Profil />
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <Features />
+          <Guru />
         </AnimatedSection>
 
         <AnimatedSection>
-          <QuickActions />
+          <Galeri />
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <FAQ />
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <Contact />
+          <PendaftaranCTA />
         </AnimatedSection>
       </main>
 
