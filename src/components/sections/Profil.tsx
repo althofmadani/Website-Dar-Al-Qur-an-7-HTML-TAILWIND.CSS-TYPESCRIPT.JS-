@@ -78,6 +78,7 @@ export default function Profil() {
                                     src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&q=80"
                                     alt="Pondok Pesanren Dar Al-Qur'an"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover"
                                     placeholder="blur"
                                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="

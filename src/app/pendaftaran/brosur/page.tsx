@@ -29,6 +29,7 @@ export default function BrosurPage() {
                                     src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600"
                                     alt="Brosur Pendaftaran"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover"
                                 />
                             </div>

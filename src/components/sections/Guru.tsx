@@ -81,6 +81,7 @@ export default function Guru() {
                                         src={pengasuh.image}
                                         alt={pengasuh.name}
                                         fill
+                                        sizes="(max-width: 768px) 256px, 320px"
                                         className="object-cover"
                                         placeholder="blur"
                                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
@@ -139,6 +140,7 @@ export default function Guru() {
                                             src={teacher.image}
                                             alt={teacher.name}
                                             fill
+                                            sizes="(max-width: 768px) 112px, 128px"
                                             className="object-cover transition-transform duration-300 group-hover:scale-110"
                                             placeholder="blur"
                                             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="

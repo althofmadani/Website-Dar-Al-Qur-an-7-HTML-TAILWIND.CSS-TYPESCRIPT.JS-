@@ -93,6 +93,13 @@ export default function Galeri() {
                                     src={image.src}
                                     alt={image.alt}
                                     fill
+                                    sizes={
+                                        index === 0 || index === 5
+                                            ? '(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw'
+                                            : index === 6
+                                                ? '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw'
+                                                : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
+                                    }
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     placeholder="blur"
                                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="

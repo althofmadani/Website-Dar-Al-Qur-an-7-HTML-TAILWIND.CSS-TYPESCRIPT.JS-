@@ -40,6 +40,7 @@ export default function Hero() {
                     src="/assets/images/pexels-pashal-337904.jpg"
                     alt="Islamic background"
                     fill
+                    sizes="100vw"
                     className="object-cover"
                     priority
                     placeholder="blur"

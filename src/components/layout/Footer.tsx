@@ -20,8 +20,9 @@ export default function Footer() {
                             width={80}
                             height={80}
                             className="w-16 h-16 object-contain group-hover:scale-105 transition-transform"
+                            style={{ width: 'auto', height: 'auto' }}
                         />
-                        <h3 className="text-2xl font-bold text-black">Pondok Pesantren Dar Al-Qur'an</h3>
+                        <h3 className="text-2xl font-bold text-black">Pondok Pesantern Dar Al-Qur'an</h3>
                     </Link>
 
                     <p className="text-text-secondary max-w-[500px] mb-10 text-lg">
@@ -61,10 +62,11 @@ export default function Footer() {
 
                 <div className="pt-10 border-t border-border-light text-center">
                     <p className="text-sm text-text-secondary opacity-60">
-                        &copy; {currentYear} Pondok Pesantren Dar Al-Qur'an. Hak Cipta Dilindungi.
+                        &copy; {currentYear} Pondok Pesantern Dar Al-Qur'an. Hak Cipta Dilindungi.
                     </p>
                 </div>
             </div>
         </footer>
     );
 }
+

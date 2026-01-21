@@ -81,6 +81,7 @@ export default function KolomPage() {
                                                 src={article.image}
                                                 alt={article.title}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, 800px"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                             />
                                         </div>

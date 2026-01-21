@@ -17,6 +17,7 @@ export default function ProfilPengasuhPage() {
                                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
                                 alt="Ustadz Pengasuh"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 320px"
                                 className="object-cover"
                             />
                         </div>
@@ -54,6 +55,7 @@ export default function ProfilPengasuhPage() {
                                                 src={pengasuh.image}
                                                 alt={pengasuh.name}
                                                 fill
+                                                sizes="64px"
                                                 className="object-cover"
                                             />
                                         </div>

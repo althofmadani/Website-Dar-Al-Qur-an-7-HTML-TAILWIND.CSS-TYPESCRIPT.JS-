@@ -31,7 +31,7 @@ const MEGA_MENU_CONTENT: Record<string, { label: string; links: { label: string;
             label: 'Profil Institusi',
             links: [
                 { label: 'Visi dan Misi', href: '/profil/visi-misi' },
-                { label: 'Profil Pesantren', href: '/profil/pesantren' },
+                { label: 'Profil Pesantern', href: '/profil/pesantern' },
                 { label: 'Profil Pengasuh', href: '/profil/pengasuh' },
             ],
         },
@@ -147,10 +147,11 @@ export default function Navbar() {
                     <Link href="/" className="relative flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity">
                         <Image
                             src="/assets/images/logo.png"
-                            alt="Pondok Pesantren Dar Al-Qur'an"
+                            alt="Pondok Pesantern Dar Al-Qur'an"
                             width={160}
                             height={20}
                             className="h-5 w-auto object-contain"
+                            style={{ width: 'auto' }}
                             priority
                         />
                         <div className="relative">
@@ -334,3 +335,4 @@ export default function Navbar() {
         </>
     );
 }
+

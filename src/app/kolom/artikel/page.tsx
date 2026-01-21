@@ -89,6 +89,7 @@ export default function ArtikelPage() {
                                                 src={artikel.image}
                                                 alt={artikel.title}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                             />
                                             <span className="absolute top-4 left-4 bg-islamic-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
