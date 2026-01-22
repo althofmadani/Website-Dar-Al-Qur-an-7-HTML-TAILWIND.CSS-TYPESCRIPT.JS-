@@ -76,7 +76,7 @@ export default function Guru() {
                         <div className="flex flex-col lg:flex-row items-center gap-10">
                             {/* Photo */}
                             <div className="relative flex-shrink-0">
-                                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-premium">
+                                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-premium">
                                     <Image
                                         src={pengasuh.image}
                                         alt={pengasuh.name}
@@ -135,7 +135,7 @@ export default function Guru() {
                                 className="group bg-white rounded-2xl p-6 text-center shadow-soft border border-border-light hover:shadow-elevated hover:border-islamic-primary/30 transition-all duration-300"
                             >
                                 <div className="relative w-28 h-28 mx-auto mb-4">
-                                    <div className="w-full h-full rounded-full overflow-hidden border-3 border-islamic-primary/20 group-hover:border-islamic-primary transition-all duration-300">
+                                    <div className="relative w-full h-full rounded-full overflow-hidden border-3 border-islamic-primary/20 group-hover:border-islamic-primary transition-all duration-300">
                                         <Image
                                             src={teacher.image}
                                             alt={teacher.name}

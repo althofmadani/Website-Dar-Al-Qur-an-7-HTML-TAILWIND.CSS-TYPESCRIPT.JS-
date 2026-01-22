@@ -55,7 +55,7 @@ export default function Profil() {
 
                         <div className="mt-10">
                             <Link href="/profil/visi-misi">
-                                <Button variant="primary" size="lg" className="flex gap-2 items-center">
+                                <Button variant="primary" size="lg" className="flex gap-2 items-center hover:-translate-y-0.5">
                                     Pelajari Lebih Lanjut
                                     <Icons.ArrowRight size={20} />
                                 </Button>

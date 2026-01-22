@@ -1,41 +1,31 @@
-# Next.js Image Component Fixes - COMPLETED
+# Image Fixes Plan
 
-This TODO tracks the fixes for console warnings related to Next.js Image components:
-1. Missing `sizes` prop on images with `fill`
-2. Invalid parent `position` for images with `fill`
-3. Logo image aspect ratio warnings
+## Issues Identified:
+1. **Logo Image** - Missing height/width aspect ratio maintenance
+2. **Fill Images** - Parent elements with invalid position (static instead of absolute/fixed/relative)
 
-## ✅ Completed Fixes
+## Files to Edit:
+1. `src/components/layout/Navbar.tsx` - Fix logo aspect ratio
+2. `src/components/sections/Guru.tsx` - Add relative positioning to parent divs
+3. `src/components/sections/Profil.tsx` - Add relative positioning to parent div
 
-### High Priority (Visible on Homepage) - ALL COMPLETED
-- [x] `src/components/sections/Hero.tsx` - Added `sizes="100vw"` to hero background image
-- [x] `src/components/sections/Guru.tsx` - Added `sizes` prop to 5 images (1 main + 4 teachers)
-- [x] `src/components/sections/Galeri.tsx` - Added `sizes` prop to 8 gallery images
-- [x] `src/components/layout/Navbar.tsx` - Fixed logo aspect ratio (added `style={{ width: 'auto' }}`)
-- [x] `src/components/layout/Footer.tsx` - Fixed logo aspect ratio (added `style={{ width: 'auto', height: 'auto' }}`)
-- [x] `src/components/sections/Profil.tsx` - Added `sizes` prop to main image
+## Fixes Applied:
 
-### Medium Priority (Other Pages) - ALL COMPLETED
-- [x] `src/app/berita/page.tsx` - Added `sizes` prop to 3 images
-- [x] `src/app/berita/kegiatan/page.tsx` - Added `sizes` prop to 4 images
-- [x] `src/app/berita/galeri/page.tsx` - Added `sizes` prop to 7 images + modal image
-- [x] `src/app/profil/pengasuh/page.tsx` - Added `sizes` prop to 4 images
-- [x] `src/app/pendidikan/tahfidz/page.tsx` - Added `sizes` prop to 2 images
-- [x] `src/app/kolom/page.tsx` - Added `sizes` prop to article images
-- [x] `src/app/kolom/oase/page.tsx` - Added `sizes` prop to article images
-- [x] `src/app/kolom/artikel/page.tsx` - Added `sizes` prop to article images
-- [x] `src/app/pendaftaran/brosur/page.tsx` - Added `sizes` prop to brochure image
-- [x] `src/app/profil/pesantren/page.tsx` - Added `sizes` prop to main image
+### Navbar.tsx
+- [x] Add `height: "auto"` to logo Image style
 
-## Size Values Used
-- Hero/Full-width: `sizes="100vw"`
-- Grid columns (2): `sizes="(max-width: 768px) 100vw, 50vw"`
-- Grid columns (3): `sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"`
-- Grid columns (4): `sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"`
-- Profile/Circle: `sizes="(max-width: 768px) 256px, 320px"` and `sizes="(max-width: 768px) 112px, 128px"`
+### Guru.tsx
+- [x] Add `relative` to pengasuh image parent div
+- [x] Add `relative` to teacher images parent div (w-28 h-28)
+- [x] Add `relative` to outer container div
 
-## Summary
-All Next.js Image component warnings have been fixed:
-- ✅ Added `sizes` prop to all images with `fill` prop
-- ✅ Added `style={{ width: 'auto' }}` to logo images to maintain aspect ratio
+### Profil.tsx
+- [x] Add `relative` to main image parent div (already had relative)
+
+## Status: COMPLETED
+
+## Summary:
+- Fixed logo aspect ratio by adding `height: "auto"` to Navbar.tsx
+- Added `relative` positioning to 5 parent divs of fill images in Guru.tsx (1 pengasuh + 4 teachers)
+- Profil.tsx already had proper `relative` positioning on parent divs
 

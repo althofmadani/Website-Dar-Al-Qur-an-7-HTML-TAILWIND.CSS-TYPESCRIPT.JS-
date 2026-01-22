@@ -17,10 +17,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = 'primary', size = 'md', children, ...props }, ref) => {
         const variants = {
-            primary: 'bg-islamic-primary text-white hover:bg-islamic-secondary shadow-soft hover:shadow-elevated',
-            secondary: 'bg-white/10 text-text-secondary backdrop-blur-md border border-white/30 hover:bg-white/20',
+            primary: 'bg-islamic-primary text-white hover:bg-islamic-secondary hover:shadow-lg hover:shadow-islamic-primary/25 hover:-translate-y-0.5',
+            secondary: 'bg-white/20 text-text-secondary backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(255,255,255,0.15)] hover:bg-white/35 hover:border-white/70 hover:shadow-[0_12px_40px_0_rgba(255,255,255,0.25),0_4px_8px_0_rgba(255,255,255,0.1)_inset] hover:-translate-y-0.5',
             ghost: 'bg-transparent hover:bg-black/5 text-text-secondary',
-            outline: 'bg-transparent border border-islamic-primary text-islamic-primary hover:bg-islamic-primary hover:text-white',
+            outline: 'bg-transparent border border-islamic-primary text-islamic-primary hover:bg-islamic-primary hover:text-white hover:shadow-lg hover:shadow-islamic-primary/25 hover:-translate-y-0.5',
         };
 
         const sizes = {

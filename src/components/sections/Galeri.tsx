@@ -50,7 +50,7 @@ const galleryImages = [
 
 export default function Galeri() {
     return (
-        <section id="galeri" className="py-24 bg-surface-secondary">
+        <section id="galeri" className="py-24 bg-white">
             <div className="max-w-[1200px] mx-auto px-6">
                 {/* Section Header */}
                 <motion.div
@@ -85,10 +85,9 @@ export default function Galeri() {
                                 index === 0 || index === 5 ? 'sm:col-span-2 sm:row-span-2' : ''
                             } ${index === 6 ? 'lg:col-span-2' : ''}`}
                         >
-                            <div className={`relative w-full ${
-                                index === 0 || index === 5 ? 'h-[400px]' : 
-                                index === 6 ? 'h-[200px]' : 'h-[250px]'
-                            }`}>
+                            {/* Card Container - Properly clips overlay to rounded corners */}
+                            <div className="relative w-full h-full min-h-[250px] sm:min-h-[200px] lg:min-h-[200px] overflow-hidden rounded-2xl">
+                                {/* Image - Fills entire container */}
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
@@ -100,28 +99,27 @@ export default function Galeri() {
                                                 ? '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw'
                                                 : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
                                     }
-                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     placeholder="blur"
                                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                                 />
 
-                                {/* Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-islamic-primary/80 via-islamic-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
-
-                                {/* Content on Hover */}
-                                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                                    <Icons.Image size={32} className="text-white mb-3" />
-                                    <h3 className="text-xl font-bold text-white text-center">
-                                        {image.title}
-                                    </h3>
-                                </div>
-
                                 {/* Badge for larger images */}
                                 {(index === 0 || index === 5) && (
-                                    <div className="absolute top-4 left-4 bg-islamic-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                                    <div className="absolute top-4 left-4 z-20 bg-islamic-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                                         Unggulan
                                     </div>
                                 )}
+
+                                {/* Hover Overlay - Perfectly contained with absolute inset-0 */}
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div className="flex flex-col items-center justify-center p-6">
+                                        <Icons.Image size={32} className="text-white mb-3" />
+                                        <h3 className="text-xl font-bold text-white text-center">
+                                            {image.title}
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
@@ -137,7 +135,7 @@ export default function Galeri() {
                 >
                     <a
                         href="/berita/galeri"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-islamic-primary text-white rounded-full font-semibold hover:bg-islamic-secondary transition-all shadow-elevated hover:shadow-premium"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-islamic-primary text-white rounded-full font-semibold hover:bg-islamic-secondary hover:shadow-lg hover:shadow-islamic-primary/25 hover:-translate-y-0.5 transition-all active:scale-95"
                     >
                         <Icons.Image size={20} />
                         Lihat Galeri Lengkap

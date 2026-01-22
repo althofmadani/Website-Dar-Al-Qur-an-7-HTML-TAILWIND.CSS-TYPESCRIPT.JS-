@@ -31,7 +31,7 @@ const MEGA_MENU_CONTENT: Record<string, { label: string; links: { label: string;
             label: 'Profil Institusi',
             links: [
                 { label: 'Visi dan Misi', href: '/profil/visi-misi' },
-                { label: 'Profil Pesantern', href: '/profil/pesantern' },
+                { label: 'Profil Pondok', href: '/profil/pesantren' },
                 { label: 'Profil Pengasuh', href: '/profil/pengasuh' },
             ],
         },
@@ -136,9 +136,9 @@ export default function Navbar() {
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-[1000] h-12 transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${activeMenu || isSearchOpen
-                    ? 'bg-white backdrop-blur-xl shadow-sm border-b border-gray-100'
+                    ? 'bg-white backdrop-blur-xl shadow-lg border-b border-white/20'
                     : isScrolled
-                        ? 'bg-white backdrop-blur-xl shadow-sm border-b border-gray-100'
+                        ? 'bg-white/60 backdrop-blur-xl shadow-xl/10 rgba(0, 0, 0, 0.25) border-b border-white/20'
                         : 'bg-white border-b border-gray-100'
                     }`}
             >
@@ -206,8 +206,13 @@ export default function Navbar() {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className={`w-9 h-9 text-gray-500 bg-white border-none rounded-full transition-colors duration-200 ${isSearchOpen ? 'bg-black text-white' : ''
-                                }`}
+                            className={`w-9 h-9 text-gray-500 rounded-full transition-all duration-200 ${
+                                isSearchOpen 
+                                    ? 'bg-black text-white' 
+                                    : isScrolled 
+                                        ? 'bg-black/10 backdrop-blur-xl border border-none' 
+                                        : 'bg-white border-none'
+                            }`}
                             onClick={() => {
                                 setIsSearchOpen(!isSearchOpen);
                                 setActiveMenu(null);

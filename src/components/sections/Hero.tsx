@@ -12,11 +12,11 @@ export default function Hero() {
     useEffect(() => {
         const hour = new Date().getHours();
         if (hour < 12) {
-            setGreeting('Selamat Pagi');
+            setGreeting('Selamat Pagi!');
         } else if (hour < 18) {
-            setGreeting('Selamat Siang');
+            setGreeting('Selamat Siang!');
         } else {
-            setGreeting('Selamat Malam');
+            setGreeting('Selamat Malam!');
         }
     }, []);
 
@@ -49,7 +49,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Overlay */}
-            <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/10 via-white/30 to-surface-secondary" />
+            <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/5 via-white/20 to-surface-primary" />
 
             {/* Content */}
             <div className="relative z-[2] max-w-[900px] px-6 flex flex-col items-center">
@@ -59,9 +59,8 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-[4rem] font-extrabold leading-[1.1] mb-6 text-white text-shadow-lg"
                 >
-                    {greeting} di Website <br />
-                    Pondok Pesantern <br />
-                    <span className="text-islamic-primary">Dar Al-Qur'an <br /> Kebon Baru</span>
+                    {greeting} <br /> Selamat Datang di Website <br /> Pondok Pesantren <br />
+                    <span className="text-text-secondary">Dar Al-Qur'an <br /> Kebon Baru</span>
                 </motion.h1>
 
                 <motion.p

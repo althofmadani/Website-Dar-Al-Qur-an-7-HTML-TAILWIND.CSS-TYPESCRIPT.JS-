@@ -64,9 +64,9 @@ export default function Contact() {
                                 <div>
                                     <p className="text-sm text-gray-500 mb-1">Alamat</p>
                                     <p className="text-gray-800 font-medium">
-                                        Jl. KH. Ahmad Dahlan No. 19<br />
-                                        Kebon Baru, Cipayung, Jakarta Timur<br />
-                                        DKI Jakarta 13890
+                                        Jl. Kebon Baru 01/06 No. 26<br />
+                                        Ds. Arjawinangun - Kec. Arjawinangun <br /> Kab. Cirebon<br />
+                                        Jawa Barat 45162
                                     </p>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500 mb-1">Telepon</p>
-                                    <p className="text-gray-800 font-medium">+62 21 1234 5678</p>
+                                    <p className="text-gray-800 font-medium">+62 8122364891</p>
                                 </div>
                             </div>
 
@@ -122,8 +122,7 @@ export default function Contact() {
                                 </div>
                                 <p className="text-gray-500 font-medium mb-2">Peta Lokasi</p>
                                 <p className="text-gray-400 text-sm text-center px-8">
-                                    Jl. KH. Ahmad Dahlan No. 19<br />
-                                    Kebon Baru, Cipayung, Jakarta Timur
+                                    Pondok Pesantren Dar Al-Qur'an Kebon Baru
                                 </p>
                             </div>
                             
@@ -187,7 +186,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full py-3.5 rounded-xl bg-islamic-primary text-white font-bold shadow-soft hover:bg-islamic-secondary hover:shadow-elevated transition-all disabled:opacity-50 disabled:pointer-events-none active:scale-95"
+                                className="w-full py-3.5 rounded-xl bg-islamic-primary text-white font-bold shadow-soft hover:bg-islamic-secondary hover:shadow-lg hover:shadow-islamic-primary/25 hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:pointer-events-none active:scale-95"
                             >
                                 {isSubmitting ? (
                                     <div className="flex items-center gap-2 justify-center">
