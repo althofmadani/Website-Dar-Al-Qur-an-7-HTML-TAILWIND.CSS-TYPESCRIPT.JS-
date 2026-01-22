@@ -13,14 +13,53 @@ const MOBILE_LINKS = [
         href: '#',
         submenu: [
             { label: 'Visi dan Misi', href: '/profil/visi-misi' },
-            { label: 'Profil Pesantren', href: '/profil/pesantren' },
+            { label: 'Profil Pondok', href: '/profil/pesantren' },
             { label: 'Profil Pengasuh', href: '/profil/pengasuh' },
         ]
     },
-    { label: 'Pendidikan', href: '/pendidikan' },
-    { label: 'Pendaftaran', href: '/pendaftaran' },
+    {
+        label: 'Berita',
+        href: '#',
+        submenu: [
+            { label: 'Kegiatan', href: '/berita/kegiatan' },
+            { label: 'Galeri Foto', href: '/berita/galeri' },
+        ]
+    },
+    {
+        label: 'Kolom',
+        href: '#',
+        submenu: [
+            { label: "Oase Al-Qur'an", href: '/kolom/oase' },
+            { label: 'Kalam Hikmah', href: '/kolom/kalam-hikmah' },
+            { label: 'Artikel', href: '/kolom/artikel' },
+        ]
+    },
+    {
+        label: 'Pendidikan',
+        href: '#',
+        submenu: [
+            { label: 'Tahsin', href: '/pendidikan/tahsin' },
+            { label: 'Tahfidz', href: '/pendidikan/tahfidz' },
+            { label: 'Madrasah', href: '/pendidikan/madrasah' },
+        ]
+    },
+    {
+        label: 'Pendaftaran',
+        href: '#',
+        submenu: [
+            { label: 'Brosur', href: '/pendaftaran/brosur' },
+            { label: 'Formulir Pendaftaran', href: '/pendaftaran/formulir' },
+        ]
+    },
     { label: 'DQ Mart', href: '/dq-mart' },
-    { label: 'Kontak', href: '/kontak' },
+    {
+        label: 'Kontak',
+        href: '#',
+        submenu: [
+            { label: 'Sosial Media', href: '/kontak/sosial-media' },
+            { label: 'Kontak dan Alamat', href: '/kontak/alamat' },
+        ]
+    },
 ];
 
 interface MobileNavProps {

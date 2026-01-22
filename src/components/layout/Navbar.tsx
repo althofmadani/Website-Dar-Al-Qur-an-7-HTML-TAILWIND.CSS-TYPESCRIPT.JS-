@@ -226,7 +226,12 @@ export default function Navbar() {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="md:hidden w-9 h-9 text-gray-500 bg-white border-none rounded-full"
+                            className={`md:hidden w-9 h-9 text-gray-500 rounded-full transition-all duration-200 ${isMobileMenuOpen
+                                ? 'bg-black text-white'
+                                : isScrolled
+                                    ? 'bg-black/10 backdrop-blur-xl border border-none'
+                                    : 'bg-white border-none'
+                                }`}
                             aria-label="Menu"
                             onClick={() => setIsMobileMenuOpen(true)}
                         >
