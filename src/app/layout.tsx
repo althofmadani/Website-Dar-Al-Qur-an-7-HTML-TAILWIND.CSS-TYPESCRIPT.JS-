@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Amiri, Scheherazade_New } from "next/font/google";
 import "./globals.css";
 import RegistrationModal from "@/components/layout/RegistrationModal";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -48,6 +49,7 @@ export default function RootLayout({
         {children}
         <RegistrationModal />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
