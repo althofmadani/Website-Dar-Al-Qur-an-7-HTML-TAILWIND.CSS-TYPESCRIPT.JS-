@@ -57,7 +57,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-[4rem] font-extrabold leading-[1.1] mb-6 text-white text-shadow-lg"
+                    className="text-3xl md:text-5xl lg:text-[4rem] font-extrabold leading-[1.1] mb-6 text-white text-shadow-lg"
                 >
                     {greeting} <br /> Selamat Datang di Website <br /> Pondok Pesantren <br />
                     <span className="text-text-secondary">Dar Al-Qur'an <br /> Kebon Baru</span>

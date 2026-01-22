@@ -85,10 +85,13 @@ const MEGA_MENU_CONTENT: Record<string, { label: string; links: { label: string;
     ],
 };
 
+import MobileNav from '@/components/layout/MobileNav';
+
 export default function Navbar() {
     const isScrolled = useScroll(20);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
     const handleMouseEnter = (menuId: string) => {
@@ -206,13 +209,12 @@ export default function Navbar() {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className={`w-9 h-9 text-gray-500 rounded-full transition-all duration-200 ${
-                                isSearchOpen 
-                                    ? 'bg-black text-white' 
-                                    : isScrolled 
-                                        ? 'bg-black/10 backdrop-blur-xl border border-none' 
-                                        : 'bg-white border-none'
-                            }`}
+                            className={`w-9 h-9 text-gray-500 rounded-full transition-all duration-200 ${isSearchOpen
+                                ? 'bg-black text-white'
+                                : isScrolled
+                                    ? 'bg-black/10 backdrop-blur-xl border border-none'
+                                    : 'bg-white border-none'
+                                }`}
                             onClick={() => {
                                 setIsSearchOpen(!isSearchOpen);
                                 setActiveMenu(null);
@@ -224,8 +226,9 @@ export default function Navbar() {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="hidden w-9 h-9 text-gray-500 bg-white border-none rounded-full"
+                            className="md:hidden w-9 h-9 text-gray-500 bg-white border-none rounded-full"
                             aria-label="Menu"
+                            onClick={() => setIsMobileMenuOpen(true)}
                         >
                             <Icons.Menu size={16} />
                         </Button>
@@ -235,9 +238,8 @@ export default function Navbar() {
 
             {/* Backdrop - Always rendered, controlled by CSS */}
             <div
-                className={`fixed inset-0 top-12 z-[40] bg-white/10 backdrop-blur-sm transition-opacity duration-200 ease-in-out pointer-events-none ${
-                    activeMenu || isSearchOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
-                }`}
+                className={`fixed inset-0 top-12 z-[40] bg-white/10 backdrop-blur-sm transition-opacity duration-200 ease-in-out pointer-events-none ${activeMenu || isSearchOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
+                    }`}
                 onClick={() => {
                     setActiveMenu(null);
                     setIsSearchOpen(false);
@@ -321,7 +323,6 @@ export default function Navbar() {
                                                             <Link
                                                                 href={link.href}
                                                                 className="text-lg font-medium text-gray-700 hover:text-islamic-primary transition-all inline-block hover:translate-x-1"
-                                                                onClick={() => setActiveMenu(null)}
                                                             >
                                                                 {link.label}
                                                             </Link>
@@ -337,6 +338,8 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <MobileNav isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
         </>
     );
 }

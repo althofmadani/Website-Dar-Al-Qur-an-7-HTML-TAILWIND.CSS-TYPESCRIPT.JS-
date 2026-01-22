@@ -52,9 +52,18 @@ export default function Footer() {
 
                     {/* Nav Links */}
                     <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-semibold text-text-secondary">
-                        {['Beranda', 'Profil', 'Berita', 'Pendidikan', 'Pendaftaran', 'Kontak'].map((item) => (
-                            <li key={item}>
-                                <Link href="#" className="hover:text-islamic-primary transition-colors">{item}</Link>
+                        {[
+                            { label: 'Beranda', href: '/' },
+                            { label: 'Profil', href: '/profil' },
+                            { label: 'Berita', href: '/berita' },
+                            { label: 'Pendidikan', href: '/pendidikan' },
+                            { label: 'Pendaftaran', href: '/pendaftaran' },
+                            { label: 'Kontak', href: '/kontak' },
+                        ].map((item) => (
+                            <li key={item.label}>
+                                <Link href={item.href} className="hover:text-islamic-primary transition-colors">
+                                    {item.label}
+                                </Link>
                             </li>
                         ))}
                     </ul>

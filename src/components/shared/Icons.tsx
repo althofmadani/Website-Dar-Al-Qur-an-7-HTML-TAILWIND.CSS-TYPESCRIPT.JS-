@@ -1,7 +1,6 @@
 import {
     ChevronDown,
     ChevronRight,
-    ChevronUp,
     Menu,
     X,
     Search,
@@ -11,11 +10,9 @@ import {
     Youtube,
     Twitter,
     Plus,
-    CircleHelp,
     ArrowRight,
     GraduationCap,
     BookOpen,
-    Church, // Used as a mosque placeholder icon
     ShoppingBag,
     MapPin,
     Phone,
@@ -23,15 +20,11 @@ import {
     Clock,
     FileText,
     Image,
-    Upload,
-    Sun,
-    Moon
 } from 'lucide-react';
 
 export const Icons = {
     ChevronDown,
     ChevronRight,
-    ChevronUp,
     Menu,
     X,
     Search,
@@ -41,11 +34,9 @@ export const Icons = {
     Youtube,
     Twitter,
     Plus,
-    CircleHelp,
     ArrowRight,
     GraduationCap,
     BookOpen,
-    Mosque: Church,
     ShoppingBag,
     MapPin,
     Phone,
@@ -53,7 +44,4 @@ export const Icons = {
     Clock,
     FileText,
     Image,
-    Upload,
-    Sun,
-    Moon
 };
