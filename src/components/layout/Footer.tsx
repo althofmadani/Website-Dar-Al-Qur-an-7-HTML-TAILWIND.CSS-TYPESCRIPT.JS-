@@ -17,10 +17,9 @@ export default function Footer() {
                         <Image
                             src="/assets/images/logo.png"
                             alt="Logo"
-                            width={80}
-                            height={80}
-                            className="w-16 h-16 object-contain group-hover:scale-105 transition-transform"
-                            style={{ width: 'auto', height: 'auto' }}
+                            width={64}
+                            height={64}
+                            className="object-contain group-hover:scale-105 transition-transform"
                         />
                         <h3 className="text-2xl font-bold text-black">Pondok Pesantren Dar Al-Qur'an</h3>
                     </Link>
