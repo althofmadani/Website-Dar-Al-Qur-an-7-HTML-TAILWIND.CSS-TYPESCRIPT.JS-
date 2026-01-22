@@ -24,9 +24,7 @@ export default function Home() {
           <Guru />
         </AnimatedSection>
 
-        <AnimatedSection>
-          <Galeri />
-        </AnimatedSection>
+        <Galeri />
 
         <AnimatedSection delay={0.2}>
           <PendaftaranCTA />
