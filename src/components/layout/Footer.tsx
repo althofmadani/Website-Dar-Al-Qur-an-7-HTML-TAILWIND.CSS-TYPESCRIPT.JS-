@@ -22,7 +22,7 @@ export default function Footer() {
                             className="w-16 h-16 object-contain group-hover:scale-105 transition-transform"
                             style={{ width: 'auto', height: 'auto' }}
                         />
-                        <h3 className="text-2xl font-bold text-black">Pondok Pesantern Dar Al-Qur'an</h3>
+                        <h3 className="text-2xl font-bold text-black">Pondok Pesantren Dar Al-Qur'an</h3>
                     </Link>
 
                     <p className="text-text-secondary max-w-[500px] mb-10 text-lg">
