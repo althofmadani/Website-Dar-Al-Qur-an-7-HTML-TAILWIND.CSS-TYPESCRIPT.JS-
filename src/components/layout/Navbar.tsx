@@ -291,7 +291,7 @@ export default function Navbar() {
                                                     type="text"
                                                     placeholder="Cari di Dar Al-Qur'an..."
                                                     autoFocus
-                                                    className="w-full bg-gray-50 border border-gray-200 rounded-full px-10 py-4.5 text-2xl font-medium outline-none focus:ring-2 focus:ring-islamic-primary/20 transition-all text-black"
+                                                    className="w-full bg-gray-50 border border-gray-200 rounded-full px-10 py-4.5 text-2xl font-medium outline-none focus:ring-2 focus:ring-islamic-primary/20 transition-all text-text-secondary"
                                                 />
                                             </div>
                                             <div className="space-y-4">
@@ -348,4 +348,5 @@ export default function Navbar() {
         </>
     );
 }
+
 
