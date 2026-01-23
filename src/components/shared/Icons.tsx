@@ -34,6 +34,7 @@ export const Icons = {
     Instagram,
     Youtube,
     Twitter,
+    XPlatform: X,
     Tiktok: Music2,
     Plus,
     ArrowRight,

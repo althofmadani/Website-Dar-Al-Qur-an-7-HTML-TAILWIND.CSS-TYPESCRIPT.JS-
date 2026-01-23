@@ -61,13 +61,13 @@ export default function SosialMediaPage() {
                                     text: "text-red-600"
                                 },
                                 { 
-                                    name: "Twitter", 
-                                    icon: Icons.Twitter, 
-                                    handle: "@DarAlQuran_ID",
-                                    url: "https://twitter.com",
-                                    color: "hover:bg-sky-500",
-                                    bg: "bg-sky-500/10",
-                                    text: "text-sky-500"
+                                    name: "X (Twitter)", 
+                                    icon: Icons.XPlatform, 
+                                    handle: "@dqkebonbaru",
+                                    url: "https://x.com/dqkebonbaru",
+                                    color: "hover:bg-black",
+                                    bg: "bg-black/10",
+                                    text: "text-black"
                                 },
                             ].map((social, idx) => (
                                 <AnimatedSection key={idx} delay={idx * 0.1}>
