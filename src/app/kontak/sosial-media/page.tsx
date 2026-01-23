@@ -27,26 +27,35 @@ export default function SosialMediaPage() {
                                 { 
                                     name: "Facebook", 
                                     icon: Icons.Facebook, 
-                                    handle: "@DarAlQuranOfficial",
-                                    url: "https://facebook.com",
+                                    handle: "DQ Kebon Baru Review",
+                                    url: "https://www.facebook.com/dqkebonbarureview",
                                     color: "hover:bg-blue-600",
                                     bg: "bg-blue-600/10",
                                     text: "text-blue-600"
                                 },
-                                { 
+                                 { 
                                     name: "Instagram", 
                                     icon: Icons.Instagram, 
-                                    handle: "@daralquran_id",
-                                    url: "https://instagram.com",
+                                    handle: "@dq.kebonbaru",
+                                    url: "https://www.instagram.com/dq.kebonbaru/",
                                     color: "hover:bg-pink-600",
                                     bg: "bg-pink-600/10",
                                     text: "text-pink-600"
                                 },
                                 { 
+                                    name: "TikTok", 
+                                    icon: Icons.Tiktok, 
+                                    handle: "@dqkebonbaru",
+                                    url: "https://www.tiktok.com/@dqkebonbaru",
+                                    color: "hover:bg-black",
+                                    bg: "bg-black/10",
+                                    text: "text-black"
+                                },
+                                { 
                                     name: "Youtube", 
                                     icon: Icons.Youtube, 
-                                    handle: "Dar Al-Qur'an Official",
-                                    url: "https://youtube.com",
+                                    handle: "@dqkebonbaru2369",
+                                    url: "https://www.youtube.com/@dqkebonbaru2369",
                                     color: "hover:bg-red-600",
                                     bg: "bg-red-600/10",
                                     text: "text-red-600"
