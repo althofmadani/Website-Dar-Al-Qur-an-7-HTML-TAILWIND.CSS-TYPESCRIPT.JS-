@@ -33,6 +33,7 @@ export default function Footer() {
                         {[
                             { icon: <Icons.Facebook />, href: "https://www.facebook.com/dqkebonbarureview", label: "Facebook" },
                             { icon: <Icons.Instagram />, href: "https://www.instagram.com/dq.kebonbaru/", label: "Instagram" },
+                            { icon: <Icons.Tiktok />, href: "https://www.tiktok.com/@dqkebonbaru", label: "TikTok" },
                             { icon: <Icons.Twitter />, href: "#", label: "Twitter" },
                             { icon: <Icons.Youtube />, href: "https://www.youtube.com/@dqkebonbaru2369", label: "YouTube" }
                         ].map((social) => (
